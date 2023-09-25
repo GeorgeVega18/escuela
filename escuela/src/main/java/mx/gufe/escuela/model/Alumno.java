@@ -119,6 +119,14 @@ public class Alumno implements Serializable {
 				+ ", activo=" + activo + "]";
 	}
 
+	public Object getEstado() {
+		return null;
+	}
+
+	public void setEstado(Object estado) {
+		
+	}
+
 	
 	
 }

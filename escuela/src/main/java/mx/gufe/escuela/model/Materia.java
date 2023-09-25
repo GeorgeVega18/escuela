@@ -73,4 +73,13 @@ public class Materia implements Serializable{
 		return "Materia [id=" + id + ", name=" + name + ", activo=" + activo + "]";
 	}
 
+	public Object getEstado() {
+		return null;
+	}
+
+	public void setEstado(Object estado) {
+
+		
+	}
+
 }

@@ -8,4 +8,7 @@ import mx.gufe.escuela.utils.EscuelaException;
 public interface MateriasService {
 	List<Materia> allMaterias() throws EscuelaException;
 	Materia materia(Integer idMateria) throws EscuelaException;
+	Materia buscarMateriaPorId(Integer id);
+	Materia crearMateria(Materia crearMateria);
+	Materia buscarMateriaPorNombre(String name);
 }

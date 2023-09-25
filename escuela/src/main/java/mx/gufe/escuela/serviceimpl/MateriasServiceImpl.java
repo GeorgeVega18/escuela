@@ -1,6 +1,7 @@
 package mx.gufe.escuela.serviceimpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,4 +42,41 @@ public class MateriasServiceImpl implements MateriasService {
 		}
 	}
 
+	@Override
+	public Materia buscarMateriaPorId(Integer id) {
+		return null;
+	}
+
+	@Override
+	public Materia crearMateria(Materia crearMateria) {
+		Materia materia = new Materia();
+		
+		materia.getId();
+		materia.setName(crearMateria.getName());
+		materia.setActivo(crearMateria.getActivo());
+		materia.setEstado(crearMateria.getEstado());
+
+		materiaRepository.save(materia);
+		
+		return crearMateria;
+
+	}
+	
+
+	@Override
+	public Materia buscarMateriaPorNombre(String materia) {
+		Optional<Materia> materiaOptional = materiaRepository.buscarPorNombre(materia);
+		if (materiaOptional.isPresent()) {
+			return materiaOptional.get();
+		}else {
+		return null;
+
+	}
+		
+		
+	}
+	
+	
 }
+	
+

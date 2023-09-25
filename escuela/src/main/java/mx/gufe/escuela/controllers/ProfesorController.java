@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import mx.gufe.escuela.model.Alumno;
 import mx.gufe.escuela.model.Profesor;
 import mx.gufe.escuela.service.ProfesorService;
+import mx.gufe.escuela.utils.EscuelaException;
 
 @Controller
 @RequestMapping("profesores")
@@ -40,12 +40,12 @@ public class ProfesorController {
 
     // Endpoint para obtener todos los profesores
     @GetMapping
-    public ResponseEntity<List<Profesor>> profesores () {
+    public ResponseEntity<List<Profesor>> profesor () {
     		List<Profesor> resp = new ArrayList<>(); 
     		try {
     			resp = ProfesorService.allProfesores();
     			return new ResponseEntity<>(resp, HttpStatus.OK);
-    		}catch( ProfesorException ee ) {
+    		}catch( EscuelaException ee ) {
     			return new ResponseEntity<>(resp, HttpStatus.BAD_REQUEST);
          }
     }
