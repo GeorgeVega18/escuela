@@ -3,22 +3,15 @@ package mx.gufe.escuela.service;
 import java.util.List;
 
 import mx.gufe.escuela.model.Profesor;
+import mx.gufe.escuela.utils.EscuelaException;
 
-public class ProfesorService {
+public interface ProfesorService {
+	List<Profesor> allProfesor() throws EscuelaException;
+	Profesor profesor(Integer idProfesor) throws EscuelaException;
 
-	public void agregarProfesor(Profesor profesor) {		
-	}
+	 Profesor agregarProfesor (Profesor agregarProfesor);
+	 Profesor buscaPorId(Integer idProfesor);
+	Boolean eliminarProfesorPorId(Integer id);
 
-	public Profesor buscarprofesorPorId(Integer id) {
-		return null;
-	}
-
-	public Boolean eliminarProfesorPorId(Integer id) {
-		return null;
-	}
-
-	public static List<Profesor> allProfesor() {
-		return null;
-	}
 
 }
