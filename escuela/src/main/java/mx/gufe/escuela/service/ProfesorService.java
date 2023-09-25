@@ -9,17 +9,15 @@ public class ProfesorService {
 	public void agregarProfesor(Profesor profesor) {		
 	}
 
-	public Profesor obtenerProfesorPorId(int id) {
+	public Profesor buscarprofesorPorId(Integer id) {
 		return null;
 	}
 
-	public void actualizarProfesor(int id, Profesor profesorActualizado) {
+	public Boolean eliminarProfesorPorId(Integer id) {
+		return null;
 	}
 
-	public void eliminarProfesor(int id) {
-	}
-
-	public static List<Profesor> allProfesores() {
+	public static List<Profesor> allProfesor() {
 		return null;
 	}
 

@@ -46,7 +46,7 @@ public class AlumnosController {
 			try {
 				alumno = alumnosService.eliminarAlumnoPorId(id);
 			}catch (DataAccessException e) {
-				response.put("Mensaje ", "no se puede acceder al a base de datos");
+				response.put("Mensaje ", "NO hay acceso a la base de datos ");
 				response.put("[ERROR ] ", e.getMostSpecificCause().getCause());
 				return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 			}if ( alumno == true ) {
