@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppConstants } from '../config/app-constants';
-import { Profesor } from '../model/Profesores.model';
+import { Profesor } from '../model/Profesor.model';
 
 
 
@@ -16,9 +16,9 @@ export class ProfesorService {
     private appConstants: AppConstants
   ) { }
 
-  public getAllAlumnos(): Observable<Profesor[]> {
+  public getAllProfesor(): Observable<Profesor[]> {
     return this.httpClient.get<Profesor[]>(
-      this.appConstants.URL_Profesor
+      this.appConstants.URL_PROFESOR
     );
   }
 }
