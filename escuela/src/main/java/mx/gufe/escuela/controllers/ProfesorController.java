@@ -68,7 +68,7 @@ public class ProfesorController {
     		try {
     			profesor = profesorService.buscarprofesorPorId(id);
     		} catch (DataAccessException e) {
-    			response.put("Mensaje  ", " Error al buscar a la base de datos");
+    			response.put("Mensaje  ", " Error al buscar en la base de datos");
     			response.put("[ERR]  ", e.getMostSpecificCause().getMessage());
     			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     		}

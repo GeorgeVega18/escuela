@@ -48,12 +48,14 @@ public class AlumnosController {
 			}catch (DataAccessException e) {
 				response.put("Mensaje ", "NO hay acceso a la base de datos ");
 				response.put("[ERROR ] ", e.getMostSpecificCause().getCause());
-				return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
-			}if ( alumno == true ) {
 				response.put("mensaje ", "el Alumno con el id ".concat(id.toString().concat(" eliminado ")));
-				return new ResponseEntity<Map<String, Object>> (response, HttpStatus.BAD_REQUEST);
-			}else {
 				response.put("mensaje ", "el Alumno con el id ".concat(id.toString().concat(" sin registro en la base datos ")));
+				
+				return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+			}
+			if ( alumno == true ) {
+				
+				return new ResponseEntity<Map<String, Object>> (response, HttpStatus.BAD_REQUEST);				
 				return new ResponseEntity<Map<String, Object>> (response, HttpStatus.BAD_REQUEST);
 			}
 

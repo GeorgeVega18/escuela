@@ -68,4 +68,12 @@ public class Profesor implements  Serializable{
 	return "Profesor [id=" + id + ", name=" + name + ", apPaterno=" + apPaterno + ", apMaterno=" + apMaterno
 			+ ", materia=" + materia + "]";
         }
+
+	public void getId() {		
+	}
+
+	public void setName(String name) {
+
+	}
+
 }
